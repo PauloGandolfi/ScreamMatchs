@@ -1,7 +1,6 @@
-package br.com.alura.screeanmatch;
+package br.com.alura.lauraflix.models;
 
-
-public class Movie {
+public class Titles {
     private String name;
     private int yearRelease;
     private boolean includedPlan;
@@ -54,4 +53,3 @@ public class Movie {
         return avaliations / totalAvaliations;
     }
 }
-        
