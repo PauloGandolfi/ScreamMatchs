@@ -1,27 +1,36 @@
 package br.com.alura.lauraflix;
+
+import br.com.alura.lauraflix.calculate.CalculateOfTime;
 import br.com.alura.lauraflix.models.Movie;
 import br.com.alura.lauraflix.models.Serie;
 
 public class Lauraflix {
     public static void main(String[] args) throws Exception {
-        Movie myMovie = new Movie(); 
-        myMovie.setName("Velozes e Furiosos"); 
-        myMovie.setYearRelease(2001); 
-        myMovie.setTimeInMinutes(130); 
-        
-        System.out.println("Duracao do filme: " + myMovie.getTimeInMinutes() + " minutos"); 
 
-        Serie serie = new Serie();
-        serie.setName("Breaking Bad");
-        serie.setYearRelease(2008);
-        serie.setIncludedPlan(true);
-        serie.setSeasons(5);
-        serie.setEpisodesPerSeason(10);
-        serie.setMinutesPerEpisode(30);
-        
-        System.out.println("Duracao total da serie: " + serie.getTimeInMinutes() + " minutos");
+        Movie velozesFuriosos = new Movie(); 
+        velozesFuriosos.setName("Velozes e Furiosos"); 
+        velozesFuriosos.setYearRelease(2001); 
+        velozesFuriosos.setTimeInMinutes(130); 
 
+        Serie breakingBad = new Serie();
+        breakingBad.setName("Breaking Bad");
+        breakingBad.setYearRelease(2008);
+        breakingBad.setIncludedPlan(true);
+        breakingBad.setSeasons(5);
+        breakingBad.setEpisodesPerSeason(10);
+        breakingBad.setMinutesPerEpisode(30);
         
+        Movie jhonWick = new Movie();
+        jhonWick.setName("John Wick");
+        jhonWick.setYearRelease(2014);
+        jhonWick.setTimeInMinutes(120);
+
+        CalculateOfTime calculatorOfTime = new CalculateOfTime();
+        calculatorOfTime.included(velozesFuriosos);
+        calculatorOfTime.included(jhonWick);
+        calculatorOfTime.included(breakingBad);
+
+        System.out.println("Tempo necessario assistido: " + calculatorOfTime.getTotalTime() + " minutos");
     }
 
 
