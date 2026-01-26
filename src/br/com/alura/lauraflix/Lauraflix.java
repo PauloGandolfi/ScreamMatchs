@@ -1,6 +1,8 @@
 package br.com.alura.lauraflix;
 
 import br.com.alura.lauraflix.calculate.CalculateOfTime;
+import br.com.alura.lauraflix.calculate.FilterRecomends;
+import br.com.alura.lauraflix.models.Episodes;
 import br.com.alura.lauraflix.models.Movie;
 import br.com.alura.lauraflix.models.Serie;
 
@@ -31,6 +33,18 @@ public class Lauraflix {
         calculatorOfTime.included(breakingBad);
 
         System.out.println("Tempo necessario assistido: " + calculatorOfTime.getTotalTime() + " minutos");
+
+        Episodes episode = new Episodes();
+        episode.setNumber(1);
+        episode.setName("Velozes e Furiosos");
+        episode.setTotalViews(300);
+
+        FilterRecomends filter = new FilterRecomends();
+        filter.filter(velozesFuriosos);
+        filter.filter(jhonWick);
+        filter.filter(episode);
+
+        
     }
 
 
