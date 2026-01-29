@@ -5,6 +5,8 @@ import br.com.alura.lauraflix.calculate.FilterRecomends;
 import br.com.alura.lauraflix.models.Episodes;
 import br.com.alura.lauraflix.models.Movie;
 import br.com.alura.lauraflix.models.Serie;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Lauraflix {
     public static void main(String[] args) throws Exception {
@@ -27,6 +29,12 @@ public class Lauraflix {
         jhonWick.setYearRelease(2014);
         jhonWick.setTimeInMinutes(120);
 
+        Movie oProtetor = new Movie();
+        oProtetor.setName("O Protetor");
+        oProtetor.setYearRelease(2010);
+        oProtetor.setTimeInMinutes(180);
+        oProtetor.rate(10);
+
         CalculateOfTime calculatorOfTime = new CalculateOfTime();
         calculatorOfTime.included(velozesFuriosos);
         calculatorOfTime.included(jhonWick);
@@ -44,7 +52,14 @@ public class Lauraflix {
         filter.filter(jhonWick);
         filter.filter(episode);
 
-        
+        List<Movie> listOfFilms = new ArrayList<>();
+        listOfFilms.add(oProtetor);
+        listOfFilms.add(jhonWick);
+        listOfFilms.add(velozesFuriosos);
+
+        System.out.println("Lista de filmes" + listOfFilms.size());
+        System.out.println("Primeiro filme" + listOfFilms.get(1).getName());
+        System.out.println(listOfFilms);
     }
 
 
