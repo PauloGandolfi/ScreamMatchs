@@ -17,5 +17,10 @@ public class Movie extends Titles implements Classification {
     public int getClassification() {
         return (int) searchAvarage() / 2;
     }
+
+    @Override
+    public String toString(){
+        return "Filme: " + this.getName() + "(" + this.getYearRelease() + ")";
+    }
 }
         
