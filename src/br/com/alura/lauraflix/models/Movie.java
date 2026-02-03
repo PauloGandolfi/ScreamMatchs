@@ -5,6 +5,10 @@ import br.com.alura.lauraflix.calculate.Classification;
 public class Movie extends Titles implements Classification {
     private String director;
 
+    public Movie(String name) {
+        this.setName(name);
+    }
+
     public String getDirector(){
         return director;
     }

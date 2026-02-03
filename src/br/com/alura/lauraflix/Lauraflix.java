@@ -11,10 +11,20 @@ import java.util.List;
 public class Lauraflix {
     public static void main(String[] args) throws Exception {
 
-        Movie velozesFuriosos = new Movie(); 
-        velozesFuriosos.setName("Velozes e Furiosos"); 
+        Movie velozesFuriosos = new Movie("Velozes e Furiosos"); 
         velozesFuriosos.setYearRelease(2001); 
-        velozesFuriosos.setTimeInMinutes(130); 
+        velozesFuriosos.setTimeInMinutes(130);
+        velozesFuriosos.rate(10);
+         
+        Movie jhonWick = new Movie("John Wick");
+        jhonWick.setYearRelease(2014);
+        jhonWick.setTimeInMinutes(120);
+        jhonWick.rate(10);
+    
+        Movie oProtetor = new Movie("O Protetor");
+        oProtetor.setYearRelease(2010);
+        oProtetor.setTimeInMinutes(180);
+        oProtetor.rate(10);
 
         Serie breakingBad = new Serie();
         breakingBad.setName("Breaking Bad");
@@ -24,17 +34,6 @@ public class Lauraflix {
         breakingBad.setEpisodesPerSeason(10);
         breakingBad.setMinutesPerEpisode(30);
         
-        Movie jhonWick = new Movie();
-        jhonWick.setName("John Wick");
-        jhonWick.setYearRelease(2014);
-        jhonWick.setTimeInMinutes(120);
-
-        Movie oProtetor = new Movie();
-        oProtetor.setName("O Protetor");
-        oProtetor.setYearRelease(2010);
-        oProtetor.setTimeInMinutes(180);
-        oProtetor.rate(10);
-
         CalculateOfTime calculatorOfTime = new CalculateOfTime();
         calculatorOfTime.included(velozesFuriosos);
         calculatorOfTime.included(jhonWick);
@@ -60,6 +59,7 @@ public class Lauraflix {
         System.out.println("Lista de filmes" + listOfFilms.size());
         System.out.println("Primeiro filme" + listOfFilms.get(1).getName());
         System.out.println(listOfFilms);
+
     }
 
 
