@@ -11,24 +11,19 @@ import java.util.List;
 public class Lauraflix {
     public static void main(String[] args) throws Exception {
 
-        Movie velozesFuriosos = new Movie("Velozes e Furiosos"); 
-        velozesFuriosos.setYearRelease(2001); 
+        Movie velozesFuriosos = new Movie("Velozes e Furiosos", 2001);  
         velozesFuriosos.setTimeInMinutes(130);
         velozesFuriosos.rate(10);
          
-        Movie jhonWick = new Movie("John Wick");
-        jhonWick.setYearRelease(2014);
+        Movie jhonWick = new Movie("John Wick", 2014);
         jhonWick.setTimeInMinutes(120);
         jhonWick.rate(10);
     
-        Movie oProtetor = new Movie("O Protetor");
-        oProtetor.setYearRelease(2010);
+        Movie oProtetor = new Movie("O Protetor", 2010);
         oProtetor.setTimeInMinutes(180);
         oProtetor.rate(10);
 
-        Serie breakingBad = new Serie();
-        breakingBad.setName("Breaking Bad");
-        breakingBad.setYearRelease(2008);
+        Serie breakingBad = new Serie("Breaking Bad", 2008);
         breakingBad.setIncludedPlan(true);
         breakingBad.setSeasons(5);
         breakingBad.setEpisodesPerSeason(10);
